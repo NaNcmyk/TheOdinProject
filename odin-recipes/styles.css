@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Special Elite', monospace;
+  background: linear-gradient(to top, #00f260, #0575e6, pink 40%, rebeccapurple);
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  opacity: .7;
+  mix-blend-mode: overlay;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  font-family: 'Palette Mosaic', monospace;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+header h1 img {
+  transform: rotate(-20deg) translateY(1.3rem);
+  opacity: .8;
+}
+
+header h1 span {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.7;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 1rem;
+  gap: 1rem;
+}
+
+main img {
+  flex: 3 1 60%;
+  width: 100%;
+  height: 80vh;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+/* ----------- menu card -------- */
+
+main .menu {
+  flex: 1 1 30%;
+  height: 80vh;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu h3 {
+  padding-top: 2rem;
+  font-family: 'Palette Mosaic', monospace;
+  font-size: 2rem;
+}
+
+.menu li {
+  list-style-type: none;
+  margin-top: 1rem;
+  margin-right: 1.2rem;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Special Elite', monospace;
+  font-size: 1.3rem;
+}
+
+.menu li a:hover {
+  text-decoration: underline wavy chartreuse 2px;
+  color: rebeccapurple;
+}
+
+.menu li:active {
+  transform: scale(.9);
+}
+
+/* ------------ footer -------- */
+
+footer {
+  margin: 1rem 0 .8rem 0;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+/* ------------ media queries ------------- */
+@media (max-width: 428px) {
+  header h1 {
+    font-size: 4.5rem;
+  }
+  header h1 img {
+    width: 90px;
+  }
+  header p {
+    font-size: .9rem;
+  }
+} 
+
+@media (min-height: 1080px) {
+  footer {
+    margin: 2.5rem 0 1.5rem 0;
+  }
+}
+
+
