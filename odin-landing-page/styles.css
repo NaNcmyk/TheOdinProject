@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --navy-blue: #1F2937;
+  --white: #F9FAF8;
+  --light-gray: #E5E7EB;
+  --dark-gray: hsl(220, 13%, 40%);
+  --royal-blue: #3882F6;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: var(--black);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+} 
+
+/* -------------- header: logo + nav ------------- */
+.main-container header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5rem;
+  background-color: var(--navy-blue);
+}
+
+header .logo {
+  font-weight: 900;
+  font-size: 24px;
+  color: var(--white);
+}
+
+header nav a {
+  font-size: 18px;
+  color: var(--light-gray);
+  text-decoration: none;
+}
+
+header nav a:not(a:last-child) {
+  margin-right: .5rem;
+}
+
+header nav a:hover {
+  color:var(--white);
+  filter: brightness(200%);
+  text-decoration: underline;
+}
+
+header nav a:active {
+  color: var(--navy-blue);
+}
+
+/* ----------- hero section ----------- */
+
+#hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  gap: 2rem;
+  padding: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 0;
+  background-color: var(--navy-blue);
+}
+
+#hero-section .hero-text {
+  min-width: 360px;
+  min-height: 200px;
+  flex: 1;
+}
+
+#hero-section .hero-text h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1;
+}
+
+#hero-section .hero-text p {
+  font-size: 18px;
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+#hero-section .hero-text button {
+  padding: .4rem 2rem;
+  border: none;
+  background-color: var(--royal-blue);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+#hero-section .hero-text button:hover {
+  filter: brightness(115%);
+}
+
+#hero-section .hero-text button:active {
+  transform: scale(.98);
+}
+
+#hero-section .hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30vh;
+  min-height: 250px;
+  min-width: 250px;
+  flex: 1;
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+/* ------------ info section -------------- */
+
+#info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 10rem;
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+#info-section h3 {
+  font-size: 36px;
+  text-align: center;
+}
+
+#info-section .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 80%;
+}
+
+#info-section .image-container figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: content;
+  flex: 0 1 300px;
+  margin: 1rem;
+}
+
+.image-container figure img {
+  border: 2px var(--royal-blue) solid;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.image-container figure figcaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* ----------- testimonials section -------------- */
+
+#testimonial-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+
+#testimonial-section .quote-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5rem;
+  padding: 0 5rem; 
+  width: 80%;
+}
+
+#testimonial-section .quote-container blockquote {
+  margin: 0;
+  padding: 0;
+  min-width: 270px;
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  font-size: 36px;
+  font-style: italic;
+}
+
+#testimonial-section .quote-container p {
+  align-self: flex-end;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0;
+}
+
+/* ------------- cta section ----------------- */
+
+#cta-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 5rem;
+  flex: 1;
+}
+
+#cta-section .cta-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 5rem;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 5rem;
+  background-color: var(--royal-blue);
+  border-radius: 5px;
+}
+
+.cta-container .cta-text {
+  min-width: 240px;
+  margin-right: 1rem;
+  padding-right: 1rem;
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 1;
+  flex: 4;
+}
+
+.cta-container .cta-text h4 {
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.cta-container .cta-text p {
+  margin-top: .5rem;
+}
+
+.cta-container button {
+  min-width: 16rem;
+  padding: .4rem;
+  margin-bottom: 1rem;
+  border: 2px var(--white) solid;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: var(--royal-blue);
+  color: var(--white);
+  align-self: flex-end;
+  flex: 1;
+  transition: background-color .3s ease;
+}
+
+.cta-container button:hover {
+  background-color: var(--white);
+  color: var(--royal-blue);
+}
+
+.cta-container button:active {
+  transform: scale(.98);
+}
+
+/* ----------- footer -------------- */
+
+footer {
+  width: 100%;
+  padding: 1rem 5rem;
+  background-color: var(--navy-blue);
+  color: var(--light-gray);
+  text-align: center;
+}
+
+/* --------- media queries -----------  */
+
+@media (max-width: 600px) {
+  .main-container header {
+    gap: 1rem;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 428px) {
+  .main-container header {
+    padding: 1rem;
+  }
+  .main-container #hero-section {
+    padding: 5rem 1rem;
+    height: 100%;
+  }
+  #hero-section .hero-text {
+    min-width: 300px;
+  }
+  #hero-section .hero-text h1 {
+    font-size: 40px;
+  }
+  #hero-section .hero-text p {
+    font-size: 15px;
+  }
+  #testimonial-section {
+    height: 100%;
+    padding: 5rem 0;
+  }
+  #testimonial-section .quote-container blockquote {
+    font-size: 30px;
+    width: 100%;
+  }
+  #testimonial-section .quote-container p {
+    min-width: 21ch;
+    align-self: flex-start;
+  }
+}

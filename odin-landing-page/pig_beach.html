@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"> 
+
+    <!-- stylesheet for general page layout -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>🏖️ Pig Beach</title>
+
+    <style>
+      /* template customization */
+
+        /* -------- header ------- */
+        .main-container header {
+            z-index: 100;
+        }
+
+        header nav a[href="#cta-section"] {
+            color: #5cccd9;
+        }
+        
+        header nav a[href="#cta-section"]:hover {
+            color: var(--royal-blue);
+            filter: brightness(100%);
+        }
+        
+        header nav a[href="#cta-section"]:active {
+            color: var(--navy-blue);
+        }
+
+        /* -------- hero section ------- */
+        #hero-section .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(/images/pig-hero-img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            opacity: .3;
+            filter: saturate(200%);
+        }
+
+        #hero-section {
+            position: relative;
+        }
+
+        #hero-section .hero-text {
+            z-index: 10;
+        }
+        
+        #hero-section .hero-text p {
+            color: var(--white);
+        }
+        
+        /* ---------- info section ----------- */
+        #info-section figure img {
+            object-fit: cover;
+            border: none;
+        }
+
+        /* ------------ media queries ---------- */
+        @media (max-width: 810px) {
+            #hero-section .hero-bg {
+                background-position: bottom;
+                height: 100%;
+            }
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <div class="main-container">
+
+      <header>
+        <div class="logo">🏖️ Pig Beach</div>
+        <nav>
+          <a href="#info-section">Highlights</a>
+          <a href="#testimonial-section">Testimonials</a>
+          <a href="#cta-section">Book Trip</a>
+        </nav>
+      </header>
+
+      <!-- section 1: hero -->
+      <div id="hero-section" class="section">
+        <div class="hero-bg"></div>
+          
+        <div class="hero-text">
+          <h1>Swim with pigs</h1>
+          <p>
+            Oh, give me a home, where the pigs roam free,<br> 
+            where the swine and the anthropoids play,<br>
+            where seldom is heard, a discouraging oink,<br>
+            and the skies are not cloudy all day.<br><br> 
+            Home, home on the island of Big Major Cay,<br>
+            where the air is so pure,<br>
+            the zephyrs so free,<br> 
+            the breezes so balmy and light~
+          </p>
+          <button onclick="location.href='https://www.bahamas.com/experiences/official-home-swimming-pigs'" type="button">Let's go!</button>
+        </div>
+
+      </div>
+
+      <!-- section 2: random info -->
+      <div id="info-section" class="section">
+
+        <h3>Pig Beach Highlights</h3>
+        <div class="image-container">
+
+          <figure>
+            <img src="/images/pig-celebrities.jpg" alt="celebrity sightings">
+            <figcaption>Mingle with 20+ porcine celebrities. Instagram-worthy photo ops at every sandy corner. Say cheese!</figcaption>
+          </figure>
+          
+          <figure>
+              <img src="/images/island-local.jpg" alt="an island local">
+              <figcaption>Row, row, row your boat, gently down the deep blue sea. Hungrily, hungrily, hungrily...will the locals come charging in.</figcaption>
+            </figure>
+            
+            <figure>
+              <img src="/images/feed-pigs.jpg" alt="pig feeding">
+              <figcaption>Wait 30 minutes to swim after eating? Pssh. Eating is an aquatic sport. (FYI, the locals prefer fresh fruits and veggies.)</figcaption>
+            </figure>
+
+          <figure>
+            <img src="/images/swimming-pig.jpg" alt="captain of the swim team">
+            <figcaption>Bask in liquid sunshine. Swim so wild and swim so free~ Daily swimming lessons from local experts.</figcaption>
+          </figure>
+
+        </div>
+
+      </div>
+    
+      <!-- section 3: testimonial -->
+      <div id="testimonial-section" class="section">
+        
+        <div class="quote-container">
+
+          <blockquote>I like pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals.</blockquote>
+          <p>-Winston Churchill</p>
+
+        </div>
+      
+      </div>
+
+      <!-- section 4: CTA -->
+      <div id="cta-section" class="section">
+
+        <div class="cta-container">
+
+          <div class="cta-text">
+            <h4>Oink. The hour is upon us.</h4>
+            <p>That little piggy went to the market, but <em>this little piggy</em> is going to escape to the Bahamas. And squeal <em>hee, hee, hee</em> all the way home. Your vessel to paradise awaits.</p>
+          </div>
+
+          <button onclick="location.href='https://www.bahamas.com/experiences/official-home-swimming-pigs'" type="button">Book Now</button>
+
+        </div>
+
+      </div>
+
+      <!-- footer -->
+      <footer>&copy 2022 🐷 by Nancy Lee</footer>
+
+    </div>
+
+  </body>
+</html>
